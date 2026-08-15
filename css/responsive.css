@@ -1,0 +1,270 @@
+/* =========================================================
+   DEVOPS PORTFOLIO - RESPONSIVE STYLESHEET
+   Mobile-First & Fluid Layout Refinements
+========================================================= */
+
+/* =========================================================
+   1. LAPTOP & LARGE TABLETS (MAX 1024PX)
+========================================================= */
+@media (max-width: 1024px) {
+    .header,
+    .navbar {
+        padding: 0 30px;
+    }
+
+    .hero-container,
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-description {
+        margin: 0 auto;
+    }
+
+    .hero-terminal,
+    .about-terminal {
+        width: 100%;
+        max-width: 580px;
+        margin: 10px auto 0;
+    }
+
+    .terminal-window {
+        transform: none !important; /* Disable 3D tilt on touch viewports */
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .certifications-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* =========================================================
+   2. TABLETS & LARGE PHONES (MAX 768PX)
+========================================================= */
+@media (max-width: 768px) {
+    /* NAVIGATION & HEADER */
+    .header,
+    .navbar {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .nav-container {
+        width: 100%;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 15px;
+        right: 15px;
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        padding: 16px;
+        border: 1px solid var(--border, rgba(103, 232, 249, 0.14));
+        border-radius: 12px;
+        background: rgba(7, 13, 28, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 12px 16px;
+        border-radius: 8px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 70px;
+    }
+
+    .hero-title {
+        font-size: clamp(34px, 10vw, 52px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-role {
+        font-size: 18px;
+        justify-content: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn {
+        width: 100%;
+        min-height: 48px;
+    }
+
+    .hero-tech {
+        justify-content: center;
+    }
+
+    .hero-social {
+        justify-content: center;
+    }
+
+    /* SECTIONS LAYOUT */
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .heading-line {
+        width: 50px;
+    }
+
+    /* ABOUT & HIGHLIGHTS */
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    /* EXPERIENCE */
+    .experience-card {
+        padding: 24px 18px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .experience-date {
+        white-space: normal;
+    }
+
+    /* GRIDS COLLAPSE */
+    .skills-grid,
+    .projects-grid,
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* CONTACT & FORM */
+    .contact-box {
+        padding: 45px 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    /* CHATBOT WINDOW MOBILE OVERLAY */
+    .chat-window {
+        width: calc(100vw - 30px);
+        max-width: 380px;
+        right: 15px;
+        bottom: 85px;
+        height: min(520px, calc(100vh - 120px));
+        border-radius: 16px;
+    }
+
+    .back-to-top {
+        right: 15px;
+        bottom: 20px;
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* =========================================================
+   3. SMALL MOBILE PHONES (MAX 480PX)
+========================================================= */
+@media (max-width: 480px) {
+    .section-container {
+        width: calc(100% - 24px);
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .hero-intro {
+        font-size: 16px;
+    }
+
+    .terminal-label {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    .terminal-body,
+    .mini-terminal-body {
+        font-size: 11px;
+        padding: 16px;
+    }
+
+    .project-card,
+    .skill-card {
+        padding: 20px;
+    }
+
+    .contact-box h2 {
+        font-size: 28px;
+    }
+
+    .contact-box > p {
+        font-size: 14px;
+    }
+}
