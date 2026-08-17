@@ -1224,17 +1224,17 @@ img, svg {
 
 /* Google Cloud logo sizing */
 
-.skill-icon {
-    width: 32px;
-    height: 32px;
+.skill-card .skill-icon {
+    width: 48px;
+    height: 48px;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.skill-icon img {
-    width: 32px;
-    height: 32px;
+.skill-card .skill-icon img {
+    width: 48px;
+    height: 48px;
     object-fit: contain;
-    filter: grayscale(1) brightness(0) saturate(100%)
-            invert(76%) sepia(96%) saturate(1800%)
-            hue-rotate(150deg) brightness(105%) contrast(105%);
 }
